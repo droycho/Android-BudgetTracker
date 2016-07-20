@@ -34,7 +34,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/categorySpinner"
         android:layout_below="@+id/dateEditText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown" />
 
     <EditText
         android:layout_width="match_parent"

@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeActivity">
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:spinnerMode="dropdown" />
+
     <fragment
         android:id="@+id/fragmentTransactionList"
         android:name="com.epicodus.budgettracker.ui.SavedTransactionListFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_saved_transaction_list" />
+        tools:layout="@layout/fragment_saved_transaction_list"
+        android:layout_below="@+id/spinner" />
 </RelativeLayout>

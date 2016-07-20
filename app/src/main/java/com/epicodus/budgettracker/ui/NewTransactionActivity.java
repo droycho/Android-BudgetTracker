@@ -40,7 +40,12 @@ public class NewTransactionActivity extends AppCompatActivity {
 
         ArrayList<String> categories = new ArrayList<>();
         categories.add("Food");
-        categories.add("Housing");
+        categories.add("Rent");
+        categories.add("Utilities");
+        categories.add("Insurance");
+        categories.add("Transportation");
+        categories.add("Personal");
+        categories.add("Other");
 
 
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, categories);
