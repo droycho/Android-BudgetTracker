@@ -42,12 +42,12 @@ public class SavedTransactionListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_saved_transaction_list, container, false);
         ButterKnife.bind(this, view);
-        setUpFirebaseAdapter();
+        setUpFirebaseAdapter("a");
 
         mNewTransactionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), NewTransactionActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,11 +55,12 @@ public class SavedTransactionListFragment extends Fragment {
         return view;
     }
 
-    private void setUpFirebaseAdapter() {
+    private void setUpFirebaseAdapter(String category) {
         Query query = FirebaseDatabase
                 .getInstance()
                 .getReference()
-                .child(Constants.FIREBASE_CHILD_TRANSACTIONS);
+                .child(Constants.FIREBASE_CHILD_TRANSACTIONS)
+                .orderByChild("category").equalTo(category);
 
         mFirebaseAdapter = new FirebaseTransactionListAdapter(Transaction.class, R.layout.transaction_list_item, FirebaseTransactionViewHolder.class, query, getActivity());
 
