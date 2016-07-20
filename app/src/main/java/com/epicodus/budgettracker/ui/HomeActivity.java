@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.epicodus.budgettracker.Constants;
 import com.epicodus.budgettracker.R;
@@ -24,6 +25,7 @@ import butterknife.ButterKnife;
 
 public class  HomeActivity extends AppCompatActivity {
     @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+    @Bind(R.id.newTransactionButton) Button mNewTransactionButton;
     private TransactionListAdapter mAdapter;
     public ArrayList<Transaction> mTransactions = new ArrayList<>();
 
@@ -38,7 +40,16 @@ public class  HomeActivity extends AppCompatActivity {
 
         setUpFirebaseAdapter();
 
+        mNewTransactionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 
     private void setUpFirebaseAdapter() {
         Query query = FirebaseDatabase

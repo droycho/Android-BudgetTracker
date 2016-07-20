@@ -31,7 +31,7 @@ public class FirebaseTransactionViewHolder extends RecyclerView.ViewHolder {
 
         mCategoryTextView.setText("Category: " + transaction.getCategory());
         mDateTextView.setText("Date of Transaction:" + transaction.getDate());
-        mAmountTextView.setText("Cost: " + String.valueOf(transaction.getAmount()));
+        mAmountTextView.setText("Cost: $" + String.format("%.2f", transaction.getAmount()));
     }
 
 }

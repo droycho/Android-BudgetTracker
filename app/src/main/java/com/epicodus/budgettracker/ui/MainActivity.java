@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 //    private DatabaseReference mTransactionReference;
 
     private Button mSubmitButton;
+    private Button mHomeButton;
     private EditText mCategoryEditText;
     private EditText mAmountEditText;
     private EditText mDateEditText;
@@ -48,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
 
                 saveToFirebase(transaction);
 
+                startActivity(intent);
+            }
+        });
+
+        mHomeButton = (Button) findViewById(R.id.homeButton);
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

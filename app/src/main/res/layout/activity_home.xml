@@ -14,4 +14,12 @@
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Transaction"
+        android:id="@+id/newTransactionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

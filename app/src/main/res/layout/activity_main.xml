@@ -20,13 +20,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="date"
         android:hint="Date of Transaction"
         android:ems="10"
         android:id="@+id/dateEditText"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:singleLine="true"
+        android:inputType="date" />
 
     <EditText
         android:layout_width="match_parent"
@@ -52,6 +53,14 @@
         android:text="Submit Entry"
         android:id="@+id/submitButton"
         android:layout_below="@+id/amountEditText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Transactions"
+        android:id="@+id/homeButton"
+        android:layout_below="@+id/submitButton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
