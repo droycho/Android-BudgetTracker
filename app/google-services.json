@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "334502396919",
+    "firebase_url": "https://budgettracker-d73cd.firebaseio.com",
+    "project_id": "budgettracker-d73cd",
+    "storage_bucket": "budgettracker-d73cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334502396919:android:d9b375ad6b74523a",
+        "android_client_info": {
+          "package_name": "com.epicodus.budgettracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334502396919-mgblffdqrrs880vssatbj0501tu8b03p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.epicodus.budgettracker",
+            "certificate_hash": "4F58648ADE52DF3BC69BCD7790A49D498490E787"
+          }
+        },
+        {
+          "client_id": "334502396919-sfeb892d9js8s081hkjqru3b2igcp155.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO1LclA7_WioWMyo83SUG0uE4Eyx4UOp4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334502396919-sfeb892d9js8s081hkjqru3b2igcp155.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
