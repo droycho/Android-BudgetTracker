@@ -2,6 +2,7 @@ package com.epicodus.budgettracker.adapters;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.util.Log;
 
 import com.epicodus.budgettracker.models.Transaction;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -33,6 +34,7 @@ public class FirebaseTransactionListAdapter extends FirebaseRecyclerAdapter<Tran
 
 @Override
 protected void populateViewHolder(final FirebaseTransactionViewHolder viewHolder, Transaction model, int position) {
+    Log.d("populateViewHolder", model.getCategory());
     viewHolder.bindTransaction(model);
 }
 };

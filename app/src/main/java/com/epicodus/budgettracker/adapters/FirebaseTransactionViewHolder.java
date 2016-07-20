@@ -23,14 +23,15 @@ public class FirebaseTransactionViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bindTransaction(Transaction transaction) {
+        Log.d("FirebaseViewHodler: ", transaction.toString());
         Log.d("FirebaseViewHolder: ", "in bindTransaction");
         TextView mCategoryTextView = (TextView) itemView.findViewById(R.id.categoryTextView);
         TextView mDateTextView = (TextView) itemView.findViewById(R.id.dateTextView);
         TextView mAmountTextView = (TextView) itemView.findViewById(R.id.amountTextView);
 
-        mCategoryTextView.setText(transaction.getCategory());
-        mDateTextView.setText(transaction.getDate());
-        mAmountTextView.setText(String.valueOf(transaction.getAmount()));
+        mCategoryTextView.setText("Category: " + transaction.getCategory());
+        mDateTextView.setText("Date of Transaction:" + transaction.getDate());
+        mAmountTextView.setText("Cost: " + String.valueOf(transaction.getAmount()));
     }
 
 }

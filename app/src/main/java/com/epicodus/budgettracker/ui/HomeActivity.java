@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.epicodus.budgettracker.Constants;
 import com.epicodus.budgettracker.R;
@@ -33,13 +34,15 @@ public class  HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+//        View view = inflater.inflate(R.layout.transaction_list_item, container, false);
 
         setUpFirebaseAdapter();
 
     }
 
     private void setUpFirebaseAdapter() {
-        Query query = FirebaseDatabase.getInstance()
+        Query query = FirebaseDatabase
+                .getInstance()
                 .getReference()
                 .child(Constants.FIREBASE_CHILD_TRANSACTIONS);
 
